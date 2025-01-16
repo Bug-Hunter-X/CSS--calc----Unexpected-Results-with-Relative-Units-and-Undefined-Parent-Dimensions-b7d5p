@@ -1,0 +1,23 @@
+To fix this, ensure that the parent container has a defined width (or height, depending on the context).  You can achieve this using various methods such as setting a fixed width, using viewport units (vw, vh), or applying a flexible box layout.
+
+```css
+/* Solution: Set a fixed width on the parent */
+.parent {
+  width: 800px;
+}
+
+.element {
+  width: calc(50% + 20px);
+}
+
+/* Or, using viewport units */
+.parent {
+  width: 80vw; /* 80% of the viewport width */
+}
+
+.element {
+  width: calc(50% + 20px);
+}
+```
+
+By providing a clear dimension for the parent, the `calc()` function can correctly evaluate the relative units and produce the intended layout.
